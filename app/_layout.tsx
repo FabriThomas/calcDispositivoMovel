@@ -8,23 +8,29 @@ export default function RootLayout() {
 		setContador(contador + 1)
 	}
 
+  function setFirst(){
+
+  }
+
 	return (
 		<>
-			<Text style={{ fontSize: 20, alignSelf: 'center' }}>Resultado: {contador} </Text>
 
 
     <View style={styles.grid}>
-      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
-				<Text style={{fontSize:150,alignSelf:'center'}}>0</Text>
+      <TouchableOpacity style={styles.displayFake} onPress={adicionarMaisUm}>
+				<Text style={{fontSize:150,alignSelf:'center'}}>Resultado: {contador}</Text>
 			</TouchableOpacity>
-			<TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
+      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
 				<Text style={{fontSize:150,alignSelf:'center'}}>1</Text>
 			</TouchableOpacity>
-      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
+			<TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
 				<Text style={{fontSize:150,alignSelf:'center'}}>2</Text>
 			</TouchableOpacity>
       <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
 				<Text style={{fontSize:150,alignSelf:'center'}}>3</Text>
+			</TouchableOpacity>
+      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
+				<Text style={{fontSize:150,alignSelf:'center'}}>+</Text>
 			</TouchableOpacity>
       <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
 				<Text style={{fontSize:150,alignSelf:'center'}}>4</Text>
@@ -36,6 +42,9 @@ export default function RootLayout() {
 				<Text style={{fontSize:150,alignSelf:'center'}}>6</Text>
 			</TouchableOpacity>
       <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
+				<Text style={{fontSize:150,alignSelf:'center'}}>-</Text>
+			</TouchableOpacity>
+      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
 				<Text style={{fontSize:150,alignSelf:'center'}}>7</Text>
 			</TouchableOpacity>
       <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
@@ -45,10 +54,25 @@ export default function RootLayout() {
 				<Text style={{fontSize:150,alignSelf:'center'}}>9</Text>
 			</TouchableOpacity>
       <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
-				<Text style={{fontSize:150,alignSelf:'center'}}>+</Text>
+				<Text style={{fontSize:150,alignSelf:'center'}}>x</Text>
+			</TouchableOpacity>
+      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
+				<Text style={{fontSize:150,alignSelf:'center'}}>0</Text>
+			</TouchableOpacity>
+      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
+				<Text style={{fontSize:150,alignSelf:'center'}}>/</Text>
+			</TouchableOpacity>
+      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
+				<Text style={{fontSize:150,alignSelf:'center'}}>.</Text>
 			</TouchableOpacity>
       <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
 				<Text style={{fontSize:150,alignSelf:'center'}}>=</Text>
+			</TouchableOpacity>
+      <TouchableOpacity style={styles.botaoReset} onPress={adicionarMaisUm}>
+				<Text style={{fontSize:150,alignSelf:'center'}}>RESET</Text>
+			</TouchableOpacity>
+      <TouchableOpacity style={styles.botao} onPress={adicionarMaisUm}>
+				<Text style={{fontSize:150,alignSelf:'center'}}>√</Text>
 			</TouchableOpacity>
     </View>
       
@@ -71,6 +95,7 @@ const styles = StyleSheet.create({
   },
   botao: {
     width: '20%',
+    height: '15%',
     aspectRatio: 1,
     backgroundColor: '#f5aa1fff',
     marginHorizontal: 10,
@@ -79,9 +104,29 @@ const styles = StyleSheet.create({
     marginVertical: 10,
 		justifyContent: 'center',
 		alignItems: 'center',
-    boxShadow: '#c48a1eff',
-    shadowColor: '#c48a1eff',
-    
   },
+  botaoReset:{
+    width: '30%',
+    height: '10%',
+    aspectRatio: 1,
+    backgroundColor: '#f51f1fff',
+    marginHorizontal: 10,
+		padding: 20,
+		borderRadius: 50,
+    marginVertical: 10,
+		justifyContent: 'center',
+		alignItems: 'center',
+  },
+  displayFake:{
+    width: '85%',
+    height: '15%',
+    aspectRatio: 1,
+    backgroundColor: '#1ff57fff',
+    marginHorizontal: 10,
+		padding: 20,
+		borderRadius: 50,
+    marginVertical: 10,
+		justifyContent: 'center',
+		alignItems: 'center',
+  }
 });
-
